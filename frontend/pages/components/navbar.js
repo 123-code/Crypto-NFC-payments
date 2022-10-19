@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function navbar(){
+export default function Navbar(){
     <div>
     <Link href="./about_us"> About </Link>
     <Link href="./how"> how it works </Link>
