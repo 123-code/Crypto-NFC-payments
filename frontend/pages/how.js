@@ -1,4 +1,4 @@
-export default function how(){
+export default function How(){
     return(
 <>
 <span> Payz, provides a seamless and frictionless payment experience by letting users safely 

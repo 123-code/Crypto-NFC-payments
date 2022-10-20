@@ -1,7 +1,24 @@
-import { useState,useEffect,useRef } from "react"
-export default function register(){
+import { useState,useEffect,useRef } from "react";
+import {ethers,providers} from 'ethers';
+export default function Register(){
+const userauth = async()=>{
+  return(
+    <>
+    <div>
+      <h3> Signup with: </h3>
+     <button onClick={userautheth}> Ethereum </button>
+     <button onClick={cellphoneauth}> Cellphone </button>
+    </div>
+    </>
+    )
+}
+ 
+const cellphoneauth = ()=>{
+window.alert("not implemented");
+}
 
-    const userauth = async()=>{
+
+    const userautheth = async()=>{
         const Web3ModalRef = useRef();
         const [walletConnected,setwalletConnected] = useState(false);
       
@@ -18,7 +35,7 @@ export default function register(){
         const getProviderOrSigner = async (needSigner = false) => {
           
           const provider = await Web3ModalRef.current.connect();
-          const web3Provider = new providers.Web3Provider(provider);
+          const web3Provider = new provider.Web3Provider(provider);
       
           
           const { chainId } = await web3Provider.getNetwork();
@@ -63,3 +80,6 @@ export default function register(){
 
 
   
+
+  
+

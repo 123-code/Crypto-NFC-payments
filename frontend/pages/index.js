@@ -1,4 +1,6 @@
-import {React,useRef,useState,useEffect,useHistory} from 'react';
+import {React,useRef,useState,useEffect} from 'react';
+import {BrowserRouter as Router, Route, Switch, useHistory} from "react-router-dom";
+import { useRouter } from 'next/router'
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
@@ -7,21 +9,23 @@ import ethers from "ethers";
 import { providers } from "ethers";
 import Navbar from "./components/navbar";
 import Link from 'next/link';
+import { Register } from './register';
 
 
 //import {NFT_CONTRACT_ADDRESS,NFT_CONTRACT_ABI} from "../constants";
  
 export default function Home() {
-  const history = useHistory();
+
+  
+
   return(
-   <div>
+   <>
+  <div>
     <Head>
       <title> Payz </title>
     </Head>
 <div>
-  
-{!walletConnected ? (<button onClick={connectwallet}> connect wallet </button>)
-: null}
+
     
     <div>
    <Navbar/>
@@ -33,11 +37,17 @@ export default function Home() {
       <li> Safely </li>
       <li> with a single tap </li>
 
-<button onClick = {()=>history.push("./register")}> Register for early access </button>
+
     </div>
 
 </div>
    </div>
     
+
+<button> Register for early access  </button>
+   </>
+
+     
   )
 }
+//<Renderbutton/>
