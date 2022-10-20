@@ -1,4 +1,4 @@
-import {React,useRef,useState,useEffect} from 'react';
+import {React,useRef,useState,useEffect,useHistory} from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
@@ -12,6 +12,7 @@ import Link from 'next/link';
 //import {NFT_CONTRACT_ADDRESS,NFT_CONTRACT_ABI} from "../constants";
  
 export default function Home() {
+  const history = useHistory();
   return(
    <div>
     <Head>
@@ -32,7 +33,7 @@ export default function Home() {
       <li> Safely </li>
       <li> with a single tap </li>
 
-<Link href = "./register"> Register for early access </Link>
+<button onClick = {()=>history.push("./register")}> Register for early access </button>
     </div>
 
 </div>
