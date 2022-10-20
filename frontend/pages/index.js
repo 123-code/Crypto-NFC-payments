@@ -16,7 +16,17 @@ import { Register } from './register';
  
 export default function Home() {
 
-  
+  function ActiveLink(){
+    const router = useRouter();
+
+    const handleclick = (e)=>{
+      e.preventDefault()
+      router.push("/register")
+    }
+    return(
+      <button onClick={handleclick}> Register for early access  </button>
+    )
+  }
 
   return(
    <>
@@ -44,7 +54,7 @@ export default function Home() {
    </div>
     
 
-<button> Register for early access  </button>
+<ActiveLink/>
    </>
 
      
