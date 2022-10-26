@@ -32,7 +32,7 @@ export default function Home() {
    <>
   <div>
     <Head>
-      <title> Payz </title>
+      <title> </title>
     </Head>
 <div>
 
@@ -40,13 +40,7 @@ export default function Home() {
     <div>
    <Navbar/>
       
-      <h1> Payz </h1>
-      <h2> your mobile wallet </h2>
-
-      <h3> payz allows you to send and receive crypto </h3>
-      <li> Safely </li>
-      <li> with a single tap </li>
-
+     
 
     </div>
 
