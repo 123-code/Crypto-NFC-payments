@@ -37,12 +37,12 @@ export default function Home() {
 <div>
 
     
-    <div>
+
    <Navbar/>
       
      
 
-    </div>
+ 
 
 </div>
    </div>
