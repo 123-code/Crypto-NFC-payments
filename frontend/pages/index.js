@@ -12,8 +12,7 @@ import Link from 'next/link';
 import { Register } from './register';
 
 
-//import {NFT_CONTRACT_ADDRESS,NFT_CONTRACT_ABI} from "../constants";
- 
+
 export default function Home() {
 
   function ActiveLink(){
@@ -23,8 +22,26 @@ export default function Home() {
       e.preventDefault()
       router.push("/register")
     }
+
+    const handlehowclick = (e)=>{
+      e.preventDefault()
+      router.push("/how")
+    }
     return(
-      <button onClick={handleclick}> Register for early access  </button>
+      <>
+      <h1> 
+        Easy Payments for anyone,
+        at anytime  
+        </h1>
+
+      <button onClick={handleclick}> Create My Wallet  </button>
+
+      <button onClick={handlehowclick}> See how it works </button>
+      </>
+
+
+
+
     )
   }
 
