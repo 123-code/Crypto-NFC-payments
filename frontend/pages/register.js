@@ -1,4 +1,5 @@
 import { useState,useRouter } from 'react';
+import { Key_Generator } from '../key_generator';
 import crypto from "crypto";
 
 
@@ -22,18 +23,20 @@ const generateuserkeys = async()=>{
             keyUsages:["encrypt", "decrypt"]
     }).then((key)=>{
         return {publicKey,privateKey}
-        localStorage.setItem(publicKey,privateKey);
+        
     }).catch((err)=>{
         console.error(err);
     })
     genkeypair(true);
 }
 
+/*
 const exportuserkeys = async()=>{
    const keys = await localStorage.getItem(key);
    return keys 
 
-}
+}*/
+
 
 
     return(

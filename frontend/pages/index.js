@@ -38,10 +38,6 @@ export default function Home() {
 
       <button onClick={handlehowclick}> See how it works </button>
       </>
-
-
-
-
     )
   }
 
@@ -53,14 +49,8 @@ export default function Home() {
     </Head>
 <div>
 
-    
-
    <Navbar/>
       
-     
-
- 
-
 </div>
    </div>
     
