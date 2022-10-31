@@ -13,7 +13,11 @@ let[userpin,setuserpin] = useState("");
 
 
 const generateuserkeys = async()=>{
-     const {publicKey,privatekey} = await window.crypto.subtle.generateKey({
+     <Key_Generator userpin/>
+}
+
+/*
+const {publicKey,privatekey} = await window.crypto.subtle.generateKey({
         algorithm:{
             name: "RSA-OAEP",
             modulusLength: 4096,
@@ -28,9 +32,6 @@ const generateuserkeys = async()=>{
         console.error(err);
     })
     genkeypair(true);
-}
-
-/*
 const exportuserkeys = async()=>{
    const keys = await localStorage.getItem(key);
    return keys 
@@ -41,6 +42,7 @@ const exportuserkeys = async()=>{
 
     return(
         <>
+        
         <h2> Sign up with: </h2>
         <button onClick={generateuserkeys}> Generate Keys </button>
 
