@@ -20,7 +20,12 @@ const Routes = () => {
                 </Route>
                 <Route path="/register" component={Register}>
                     <Register/>
+
+                    </Route>
+                <Route path="/pin" component={Set_pin}>
+                    <Set_pin/>
                 </Route>
+
             </Switch>
         </Router>
     );

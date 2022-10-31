@@ -2,25 +2,8 @@ import { useState } from "react";
 import crypto from "crypto";
 
 
-
-
-
-
-
-export const Key_Generator = ()=>{
-
-    const setmypin = ()=>{
-        const [pin,setpin] = useState("");
-        return(
-            <>
-    <input  onChange = {setpin((e)=>{e.target.value})}type="password" placeholder="Password"/>
-    <button onClick={Key_Generator(pin)}> OK </button>
-            </>
-        )
-    }
-
-
-
+export const Key_Generator = (props)=>{
+    const [pin,setpin] = useState("");
     const data = props;
     const {publicKey,privateKey} = crypto.generateKeyPairSync("rsa",{
         modulusLength:2048,
@@ -35,10 +18,7 @@ export const Key_Generator = ()=>{
 
     })
     encryptMe();
-    //decrypt();
-    //console.log(privateKey.toString("hex"))
-    //localStorage.setItem('privatekey',privateKey);
-    //console.log(encryptMe)
+    console.log(encryptMe) 
 
     return(
         setmypin()
