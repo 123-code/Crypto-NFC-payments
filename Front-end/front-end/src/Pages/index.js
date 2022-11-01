@@ -13,7 +13,7 @@ export default function Home() {
    <>
   <div>
     <Head>
-      <title> </title>
+      <title> Jose Ignacio </title>
     </Head>
 <div>
    <Navbar/> 
