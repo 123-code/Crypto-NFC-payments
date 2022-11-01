@@ -1,34 +1,34 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Home } from './index';
-import { About } from './about_us';
-import { How } from './how';
-import { Register } from './register';
-import { Set_pin } from './Set_pin';
+import { Routes ,Route } from 'react-router-dom';
+import Home from './index';
+import About from './about_us';
+import How  from './how';
 
 
-const Routes = () => {
+const MyRoutes = () => {
     return (
-        <Router>
-            <Switch>
-                <Route path="/" exact>
-                    <Home />
-                </Route>
+        <Routes>
+            
+                <Route path="/" component={Home} exact/>
+                   
+              
                 <Route path="/about">
                     <About/>
                 </Route>
                 <Route path="/how">
                     <How/>
                 </Route>
-                <Route path="/register" component={Register}>
-                    <Register/>
-                    </Route>
-
-                <Route path="/pin" component={Set_pin}>
-                    <Set_pin/>
-                </Route>
-
-            </Switch>
-        </Router>
+           
+        </Routes>
     );
 } 
 export default Routes;
+/*
+<Route path="/register" component={Register}>
+                    <Register/>
+                    </Route>
+
+                     <Route path="/pin" component={Set_pin}>
+                    <Set_pin/>
+                </Route>
+
+*/
