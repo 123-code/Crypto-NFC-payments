@@ -13,7 +13,7 @@ export default function Home() {
    <>
   <div>
     <Head>
-      <title> Prueba de GIT Juanse</title>
+      <title> Jose Ignacio </title>
     </Head>
 <div>
    <Navbar/> 
