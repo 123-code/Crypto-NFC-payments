@@ -21,7 +21,8 @@ export const Key_Generator = (props)=>{
     console.log(encryptMe) 
 
     return(
-        setmypin()
+    <>
+    </>
     )
 
 }
