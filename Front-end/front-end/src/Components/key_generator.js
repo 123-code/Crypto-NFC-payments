@@ -1,9 +1,34 @@
 import { useState } from "react";
 import crypto from "crypto";
+import JSEncrypt, { jsencrypt } from 'jsencrypt';
+
+    const testkeys = () =>{
+        const encrypt = new JSEncrypt();
+        const crypto = new JSEncrypt({default_key_size: 2048});
+        const publicprivatekey = {
+            PublicKey:crypto.getPublicKey(),
+            PrivateKey:crypto.getPrivateKey()
+        };
+    
+        const publicKey = publicprivatekey.PublicKey;
+        const privateKey = publicprivatekey.PrivateKey;
+    
+        console.log(publicKey);
+        console.log(privateKey);
+    }
+    
+    testkeys()
+  
 
 
-export const Key_Generator = (props)=>{
-    const [pin,setpin] = useState("");
+
+
+
+
+
+    
+/*
+  const [pin,setpin] = useState("");
     const data = props;
     const {publicKey,privateKey} = crypto.generateKeyPairSync("rsa",{
         modulusLength:2048,
@@ -25,11 +50,7 @@ export const Key_Generator = (props)=>{
     </>
     )
 
-}
+    export const Key_Generator = (props)=>{}
 
 
-
-
-
-
-    
+*/
