@@ -2,46 +2,10 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 //import Navbar from "../Components/navbar";
 
-const Home = ()=>{
+const how = ()=>{
   return(
-   <>
-  <div>
-    <body className = "bg-cyan-500">
-    <h1 className = "font-bold text-6xl font-mono"  > Easy payments for anyone, 
-    <div>
-    </div>at anytime </h1>
-
-    <button className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"> Register Now  </button>
-
-    </body>
-
-    <div className="w-full p-4 shadow-md lg:max-w-lg">
-            <div className="space-y-2">
-                <h3 className="text-2xl font-semibold">
-                    Your go to financial app
-                </h3>
-                <p className="text-blue-600">
-                    we are building a permissionless, fast and safe payment system aimed at the unbanked.
-                </p>
-            </div>
-        </div>
-
-  <div className="w-full p-4 shadow-md lg:max-w-lg">
-            <div className="space-y-2">
-                <h3 className="text-2xl font-semibold">
-                    Your dollars on your mobile phone, at anytime 
-                </h3>
-                <p className="text-blue-600">
-                    By signing up with a web2 account, an ethereum wallet will be created for you.
-                    we are bringing unbanked, web2 users to the benefits of web3
-                  
-                </p>
-                <button className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounde"> See how it works  </button>
-            </div>
-        </div>
-
-
-        <div className="w-full p-4 shadow-md lg:max-w-lg">
+    <>
+      <div className="w-full p-4 shadow-md lg:max-w-lg">
             <div className="space-y-2">
                 <h3 className="text-2xl font-semibold">
                     OWN your bank account
@@ -53,8 +17,53 @@ const Home = ()=>{
           
             </div>
         </div>
+    
+    </>
+  )
+}
 
-        <div className="w-full p-4 shadow-md lg:max-w-lg">
+
+const Home = ()=>{
+  return(
+   <>
+  <div>
+    <body className = "bg-cyan-500 " >
+    <h1 className = "font-bold text-6xl font-mono"  > Easy payments for anyone, 
+    <div>
+    </div>at anytime </h1>
+
+    <button className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded "> Register Now  </button>
+
+    </body>
+
+    <div className="w-full p-4 shadow-md lg:max-w-lg flex items-stretch " >
+            <div className="space-y-2 ">
+                <h3 className="text-2xl font-semibold">
+                    Your go to financial app
+                </h3>
+                <p className="text-blue-600">
+                    we are building a permissionless, fast and safe payment system aimed at the unbanked.
+                </p>
+            </div>
+        </div>
+
+  <div className="w-full p-4 shadow-md lg:max-w-lg flex items-stretch ">
+            <div className="space-y-2">
+                <h3 className="text-2xl font-semibold">
+                    Your dollars on your mobile phone, at anytime 
+                </h3>
+                <p className="text-blue-600">
+                    By signing up with an existing google, or apple account, 
+                    you will create one of our wallets
+                </p>
+                <button className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded  flex-col items-center"> See how it works  </button>
+            </div>
+        </div>
+
+
+      
+
+        <div className="w-full p-4 shadow-md lg:max-w-lg ">
             <div className="space-y-2">
                 <h3 className="text-2xl font-semibold">
                     Get Notified
