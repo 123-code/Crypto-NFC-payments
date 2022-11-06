@@ -43,12 +43,56 @@ const How = ()=>{
 }
 
 
+
+const Pagebody = ()=>{
+
+  return(
+    <>
+    <div class="px-3 md:lg:xl:px-40 border-t border-b py-20 bg-opacity-10 responsive">
+        <div class="grid grid-cols-1 md:lg:xl:grid-cols-3 group bg-white shadow-xl shadow-neutral-100 border ">
+
+
+            <div
+                class="p-10 flex flex-col items-center text-center group md:lg:xl:border-r md:lg:xl:border-b hover:bg-slate-50 cursor-pointer">
+                <span class="p-5 rounded-full bg-red-500 text-white shadow-lg shadow-red-200"><svg
+                        xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg></span>
+                <p class="text-xl font-medium text-slate-700 mt-3">The current Banking system has a flaw:</p>
+                <p class="mt-2 text-sm text-slate-500">
+                "Today, 70% of LatAm's population remains unbanked or underbanked, and 58% of point of sale purchases are still made in cash"
+                <div>
+                  <h3> forbes  </h3>
+                </div>
+
+                </p>
+            </div>
+
+
+            
+</div>
+</div>
+
+
+
+
+
+    </>
+
+
+  )}
+
+  
+
+
 const Home = ()=>{
   return(
    <>
   <div>
     <body className = "bg-cyan-500 " >
-    <h1 className = "font-bold text-6xl font-mono " > Easy payments for anyone, 
+    <h1 className = "text-6xl font-mono  font-extrabold text-white sm:text-3xl md:text-5xl mb-2 " > Easy payments for anyone, 
     <div>
     </div>at anytime </h1>
 
@@ -94,9 +138,11 @@ const Home = ()=>{
         </div>
 
     </div>
-    <How/>
+<Pagebody/>
+<How/>
    </div>
    <footer className = "bg-cyan-500 ">
+    
     <div>
 
     </div>
