@@ -1,8 +1,7 @@
 {
   "name": "front-end",
   "version": "0.1.0",
-  "private": true, 
-
+  "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -10,6 +9,7 @@
     "crypto": "^1.0.1",
     "crypto-js": "^4.1.1",
     "ethers": "^5.7.2",
+    "random-bytes-js": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
@@ -42,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "@types/node": "^18.11.9",
     "tailwindcss": "^3.2.1"
   }
 }

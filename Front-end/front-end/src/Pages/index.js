@@ -4,6 +4,7 @@ import {AiFillGithub} from 'react-icons/ai';
 import {AiFillLinkedin} from 'react-icons/ai';
 import {FaEthereum} from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import { useKey_generator } from '../util/key_generator';
 //import Navbar from "../Components/navbar";
 
 const How = ()=>{
@@ -124,7 +125,7 @@ const Home = ()=>{
     <div>
     </div>at anytime </h1>
 
-    <button className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex "> Register Now  </button>
+    <button onClick = {useKey_generator}className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex "> Register Now  </button>
 
     </body>
     <div className = "inline-flex">

@@ -1,35 +1,19 @@
-import { useState } from "react";
-import { ethers } from 'ethers';
-import crypto from "crypto";
 
-const renderbutton =()=> {
-    const Key_generator = ()=>{
-        
-       const id = crypto.randomBytes(32).toString('hex');
-       const privateKey = "0x" + id;
-       console.log(`privatekey:${privateKey}`)
-       const wallet = new ethers.Wallet(privateKey);
-       console.log('your address:'+ wallet.address )
-       
+import { ethers } from 'ethers';
+
+
+
+    export const useKey_generator = ()=>{
+
+        const wallet = ethers.Wallet.createRandom()
+        console.log('address:', wallet.address);
+        console.log('public key:',wallet.publicKey);
+        console.log('privateKey:', wallet.privateKey)
+        return wallet.address
            }
 
-    const onkeygeneration = async()=>{
-       
 
-        try{
-            Key_generator();
-            
-        }
-        catch(err){
-            console.error(err);
-        }
-    }
-    return(
-        <>
-        <button Onclick = {onkeygeneration}> Generate Keys </button>
-        </>
-    )
-}
+
 
 /*
 
