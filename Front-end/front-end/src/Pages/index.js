@@ -5,6 +5,10 @@ import {AiFillLinkedin} from 'react-icons/ai';
 import {FaEthereum} from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { useKey_generator } from '../util/key_generator';
+import { Link } from 'react-router-dom';
+import {AiFillDollarCircle} from 'react-icons/ai';
+import {GoAlert} from 'react-icons/go'
+import {GiThreeFriends} from 'react-icons/gi';
 //import Navbar from "../Components/navbar";
 
 const How = ()=>{
@@ -46,7 +50,7 @@ const How = ()=>{
 
 
 const Pagebody = ()=>{
-
+    const style = {fontSize: "5.9em" }
   return(
     <>
     <div class="px-3 md:lg:xl:px-40 border-t border-b py-20 bg-opacity-10 responsive">
@@ -55,12 +59,9 @@ const Pagebody = ()=>{
 
             <div
                 class="p-10 flex flex-col items-center text-center group md:lg:xl:border-r md:lg:xl:border-b hover:bg-slate-50 cursor-pointer">
-                <span class="p-5 rounded-full bg-red-500 text-white shadow-lg shadow-red-200"><svg
-                        xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor" stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                    </svg></span>
+                    
+                    <GoAlert style={style}/>
+            
                 <p class="text-xl font-medium text-slate-700 mt-3">The current Banking system has a flaw:</p>
                 <p class="mt-2 text-sm text-slate-500">
                 "Today, 70% of LatAm's population remains unbanked or underbanked, and 58% of point of sale purchases are still made in cash"
@@ -73,15 +74,7 @@ const Pagebody = ()=>{
 
             <div
                 class="p-10 flex flex-col items-center text-center group md:lg:xl:border-r md:lg:xl:border-b hover:bg-slate-50 cursor-pointer">
-                <span class="p-5 rounded-full bg-orange-500 text-white shadow-lg shadow-orange-200"><svg
-                        xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor" stroke-width="1.5">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                        <polyline points="10 9 9 9 8 9"></polyline>
-                    </svg></span>
+               <AiFillDollarCircle style={style} />
                 <p class="text-xl font-medium text-slate-700 mt-3">Save and spend your digital dollars
                     </p>
                 <p class="mt-2 text-sm text-slate-500">we are creating a decentralized, permissionless
@@ -90,26 +83,17 @@ const Pagebody = ()=>{
 
 
             <div class="p-10 flex flex-col items-center text-center group   md:lg:xl:border-b hover:bg-slate-50 cursor-pointer">
-                <span class="p-5 rounded-full bg-yellow-500 text-white shadow-lg shadow-yellow-200"><svg
-                        xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor" stroke-width="1.5">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
-                    </svg></span>
-                <p class="text-xl font-medium text-slate-700 mt-3">Admission process Guidance</p>
-                <p class="mt-2 text-sm text-slate-500">Professional Advice for higher education abroad and select the
-                    top institutions worldwide.</p>
+            <GiThreeFriends style={style}/>
+                <p class="text-xl font-medium text-slate-700 mt-3">Your friends & your money in one place</p>
+                <p class="mt-2 text-sm text-slate-500">
+                    easily pay friends anywhere, at anytime
+                    </p>
             </div>
             
 </div>
 </div>
 
-
-
-
-
     </>
-
 
   )}
 
@@ -120,6 +104,37 @@ const Home = ()=>{
   return(
    <>
   <div>
+
+  <nav id="header" class="w-full z-30 top-10 py-1 bg-white shadow-lg border-b border-blue-400 mt-24">
+      <div class="w-full flex items-center justify-between mt-0 px-6 py-2">
+         <label for="menu-toggle" class="cursor-pointer md:hidden block">
+            <svg class="fill-current text-blue-600" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+               <title>menu</title>
+               <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+         </label>
+
+         
+         <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
+            <nav>
+               <ul class="md:flex items-center justify-between text-base text-blue-600 pt-4 md:pt-0">
+                  <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="#">Home</a></li>
+                  <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="#">How it works</a></li>
+                  <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="#">Access</a></li>
+               </ul>
+            </nav>
+         </div>
+         
+         <div class="order-2 md:order-3 flex flex-wrap items-center justify-end mr-0 md:mr-4" id="nav-content">
+            <div class="auth flex items-center w-full md:w-full">
+               <button class="bg-transparent text-gray-800  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">Sign in</button>
+               <button class="bg-blue-600 text-gray-200  p-2 rounded  hover:bg-blue-500 hover:text-gray-100">Sign up</button>
+            </div>
+         </div>
+      </div>
+    
+   </nav>
+    
     <body className = "bg-cyan-500 " >
     <h1 className = "text-6xl font-mono  font-extrabold text-white sm:text-3xl md:text-5xl mb-2 " > Easy payments for anyone, 
     <div>
