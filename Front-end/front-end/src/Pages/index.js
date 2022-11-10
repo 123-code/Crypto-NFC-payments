@@ -96,7 +96,22 @@ const Pagebody = ()=>{
     </>
 
   )}
-
+const Footer = ()=>{
+  return(
+    <footer className="bg-gray-200 text-center lg:text-left">
+  <div className="text-gray-700 text-center p-4">
+    Reach us at:
+    <div className="inline-flex">
+    <AiOutlineTwitter/>
+   <AiFillGithub/>
+   <AiFillLinkedin/>
+   <FaEthereum/>
+    </div>
+    <a className="text-gray-800" href="https://tailwind-elements.com/"></a>
+  </div>
+</footer>
+  )
+}
   
 
 
@@ -187,20 +202,6 @@ const Home = ()=>{
 <Pagebody/>
 
    </div>
-   <footer className = "bg-cyan-500 ">
-    
-    <div>
-
-    </div>
-    <h1> Reach us at: </h1>
-    <div className="inline-flex">
-    <AiOutlineTwitter/>
-   <AiFillGithub/>
-   <AiFillLinkedin/>
-   <FaEthereum/>
-    </div>
-    <button className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex "> Register Now  </button>
-   </footer>
   
    </>
 
