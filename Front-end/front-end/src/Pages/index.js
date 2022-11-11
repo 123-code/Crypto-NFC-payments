@@ -202,7 +202,7 @@ const Home = ()=>{
 <Pagebody/>
 
    </div>
-  
+  <Footer/>
    </>
 
      
