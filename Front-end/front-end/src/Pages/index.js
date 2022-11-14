@@ -11,6 +11,8 @@ import {GoAlert} from 'react-icons/go'
 import {GiThreeFriends} from 'react-icons/gi';
 //import Navbar from "../Components/navbar";
 
+
+
 const How = ()=>{
   return(
     <>
@@ -109,16 +111,20 @@ const Footer = ()=>{
     </div>
     <a className="text-gray-800" href="https://tailwind-elements.com/"></a>
   </div>
+
+  
 </footer>
   )
 }
-  
+
+
+
 
 
 const Home = ()=>{
   return(
    <>
-  <div>
+  <div className = "bg-gradient-to-r from-sky-400 to-cyan-300">
 
   <nav id="header" class="w-full z-30 top-10 py-1 bg-white shadow-lg border-b border-blue-400 mt-24">
       <div class="w-full flex items-center justify-between mt-0 px-6 py-2">
@@ -158,7 +164,7 @@ const Home = ()=>{
     <button onClick = {useKey_generator}className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex "> Register Now  </button>
 
     </body>
-    <div className = "inline-flex">
+    <div className = "inline-flex bg-white">
     <div className="w-full p-4 shadow-md lg:max-w-lg flex items-stretch flex-1 text-center px-4 py-2 m-2" >
             <div className="space-y-2 ">
                 <h3 className="text-2xl font-semibold">
@@ -173,7 +179,7 @@ const Home = ()=>{
         <div className="w-full p-4 shadow-md lg:max-w-lg flex items-stretch flex-1 text-center px-4 py-2 m-2 ">
             <div className="space-y-2">
                 <h3 className="text-2xl font-semibold">
-                    Your dollars on your mobile phone, at anytime 
+                    Your dollars on your mobile phone.
                 </h3>
                 <p className="text-blue-600">
                     By signing up with an existing google, or apple account, 
@@ -196,9 +202,12 @@ const Home = ()=>{
             </div>
         </div>
 
+        
+
        
 
     </div>
+
 <Pagebody/>
 
    </div>

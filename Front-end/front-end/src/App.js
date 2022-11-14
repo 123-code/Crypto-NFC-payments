@@ -1,6 +1,6 @@
 
 import Home from './Pages/index';
-import How from './Pages/How';
+import How from './Pages/how';
 //import MyRoutes from "./Pages/routes";
 import { BrowserRouter as Router,Route,Routes} from "react-router-dom";
 import './App.css';
@@ -16,8 +16,6 @@ function App() {
 </Routes>
 </Router>
 </div>    
-
-
 
     </>
 
