@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "crypto": "^1.0.1",
     "crypto-js": "^4.1.1",
+    "emailjs-com": "^3.2.0",
     "ethers": "^5.7.2",
     "random-bytes-js": "^1.0.0",
     "react": "^18.2.0",
@@ -19,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build", 
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

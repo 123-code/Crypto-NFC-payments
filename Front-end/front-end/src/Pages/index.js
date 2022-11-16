@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{useRef} from 'react';
+import emailjs from '@emailjs/browser';
 import {AiOutlineTwitter} from 'react-icons/ai';
 import {AiFillGithub} from 'react-icons/ai';
 import {AiFillLinkedin} from 'react-icons/ai';
@@ -10,6 +11,7 @@ import {AiFillDollarCircle} from 'react-icons/ai';
 import {GoAlert} from 'react-icons/go'
 import {GiThreeFriends} from 'react-icons/gi';
 //import Navbar from "../Components/navbar";
+
 
 
 
@@ -122,6 +124,18 @@ const Footer = ()=>{
 
 
 const Home = ()=>{
+  const form = useRef();
+  function sendEmail(e){
+    e.preventDefault();
+  
+    emailjs.sendForm('service_2qre2cn', 'template_1vvaj6m', form.current, 'B5hUjblRWJcZycFIc')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
+  
   return(
    <>
   <div className = "bg-gradient-to-r from-sky-400 to-cyan-300">
@@ -161,7 +175,7 @@ const Home = ()=>{
     <div>
     </div>at anytime </h1>
 
-    <button onClick = {useKey_generator}className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex "> Register Now  </button>
+  
 
     </body>
     <div className = "inline-flex bg-white">
@@ -188,8 +202,8 @@ const Home = ()=>{
                 <button className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded  flex-col items-center"> See how it works  </button>
             </div>
         </div>
-
-        <div className="w-full p-4 shadow-md lg:max-w-lg flex-1 text-center px-4 py-2 m-2 ">
+<form ref={form} onSubmit={sendEmail}>
+<div className="w-full p-4 shadow-md lg:max-w-lg flex-1 text-center px-4 py-2 m-2 ">
             <div className="space-y-2">
                 <h3 className="text-2xl font-semibold">
                     Get Notified
@@ -198,9 +212,11 @@ const Home = ()=>{
                   get notified of our launch dates by subscribing
                 </p>
                 <input className = "block text-sm font-medium text-slate-700" type = "email" placeholder = "your email address"></input>
-                <button className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounde"> Subscribe  </button>
+                <button onClick={sendEmail} className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounde"> Subscribe  </button>
             </div>
         </div>
+</form>
+        
 
         
 
@@ -227,6 +243,7 @@ const ActiveLink = ()=>{
     return(
       <>
       <button onClick={navigate.push("/register")}> Register </button>
+        <button onClick = {useKey_generator}className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex "> Register Now  </button>
       </>
     )
   }
