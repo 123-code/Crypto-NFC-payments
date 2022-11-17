@@ -1,10 +1,10 @@
 import React,{useRef} from 'react';
+import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import {AiOutlineTwitter} from 'react-icons/ai';
 import {AiFillGithub} from 'react-icons/ai';
 import {AiFillLinkedin} from 'react-icons/ai';
 import {FaEthereum} from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
 import { useKey_generator } from '../util/key_generator';
 import { Link } from 'react-router-dom';
 import {AiFillDollarCircle} from 'react-icons/ai';
@@ -124,7 +124,13 @@ const Footer = ()=>{
 
 
 const Home = ()=>{
+  const navigate = useNavigate();
   const form = useRef();
+
+function handleclick(){
+  navigate("/how")
+}
+
   function sendEmail(e){
     e.preventDefault();
   
@@ -134,9 +140,10 @@ const Home = ()=>{
       }, (error) => {
           console.log(error.text);
       });
-  }
+  } 
   
   return(
+   
    <>
   <div className = "bg-gradient-to-r from-sky-400 to-cyan-300">
 
@@ -162,15 +169,14 @@ const Home = ()=>{
          
          <div class="order-2 md:order-3 flex flex-wrap items-center justify-end mr-0 md:mr-4" id="nav-content">
             <div class="auth flex items-center w-full md:w-full">
-               <button class="bg-transparent text-gray-800  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">Sign in</button>
-               <button class="bg-blue-600 text-gray-200  p-2 rounded  hover:bg-blue-500 hover:text-gray-100">Sign up</button>
+              
             </div>
          </div>
       </div>
     
    </nav>
     
-    <body className = "bg-cyan-500 " >
+    <body className = "bg-cyan-500 animate-pulse box-border h-100 w-200 p-4 border-4 " >
     <h1 className = "text-6xl font-mono  font-extrabold text-white sm:text-3xl md:text-5xl mb-2 " > Easy payments for anyone, 
     <div>
     </div>at anytime </h1>
@@ -180,7 +186,7 @@ const Home = ()=>{
     </body>
     <div className = "inline-flex bg-white">
     <div className="w-full p-4 shadow-md lg:max-w-lg flex items-stretch flex-1 text-center px-4 py-2 m-2" >
-            <div className="space-y-2 ">
+            <div className="space-y-2 "> 
                 <h3 className="text-2xl font-semibold">
                     Your go to financial app
                 </h3>
@@ -199,7 +205,7 @@ const Home = ()=>{
                     By signing up with an existing google, or apple account, 
                     you will create one of our wallets
                 </p>
-                <button className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded  flex-col items-center"> See how it works  </button>
+                <button onClick={handleclick}  className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded  flex-col items-center"> See how it works  </button>
             </div>
         </div>
 <form ref={form} onSubmit={sendEmail}>
