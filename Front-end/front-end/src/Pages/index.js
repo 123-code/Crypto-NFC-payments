@@ -148,7 +148,7 @@ function handleclick(){
    
    <>
   <div className = "bg-gradient-to-r from-sky-400 to-cyan-300">
-  <img className="scale-70 absolute left-1 top-1 h-20 w-100" src={Payz}></img>
+  <img className=" inline-block rounded scale-70 absolute left-1 top-1 object-cover h-24 w-32 " src={Payz}></img>
   <nav id="header" class="w-full z-30 top-10 py-1 bg-white shadow-lg border-b border-blue-400 mt-24">
       <div class="w-full flex items-center justify-between mt-0 px-6 py-2">
          <label for="menu-toggle" class="cursor-pointer md:hidden block">
@@ -160,11 +160,13 @@ function handleclick(){
 
          
          <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
+          
             <nav>
                <ul class="md:flex items-center justify-between text-base text-blue-600 pt-4 md:pt-0">
+
                   <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="#">Home</a></li>
                   <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="/how">How it works</a></li>
-                  <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="#"></a></li>
+                  <li><a class="inline-block" href="#"> </a> </li>
                </ul>
             </nav>
          </div>
