@@ -1,4 +1,4 @@
-import React,{useRef} from 'react';
+import React,{useState,useRef} from 'react';
 import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import {AiOutlineTwitter} from 'react-icons/ai';
@@ -10,12 +10,11 @@ import { Link } from 'react-router-dom';
 import {AiFillDollarCircle} from 'react-icons/ai';
 import {GoAlert} from 'react-icons/go'
 import {GiThreeFriends} from 'react-icons/gi';
-//import Navbar from "../Components/navbar";
+import Payz from '../Payz.png'
+//import Navbar from "../Components/navbar"; Front-end/front-end/public/Payz.png
 
-
-
-
-const How = ()=>{
+const How = ()=>{ 
+  
   return(
     <>
       <div className="w-full p-4 shadow-md lg:max-w-lg">
@@ -62,6 +61,7 @@ const Pagebody = ()=>{
 
 
             <div
+            
                 class="p-10 flex flex-col items-center text-center group md:lg:xl:border-r md:lg:xl:border-b hover:bg-slate-50 cursor-pointer">
                     
                     <GoAlert style={style}/>
@@ -91,6 +91,7 @@ const Pagebody = ()=>{
                 <p class="text-xl font-medium text-slate-700 mt-3">Your friends & your money in one place</p>
                 <p class="mt-2 text-sm text-slate-500">
                     easily pay friends anywhere, at anytime
+                    
                     </p>
             </div>
             
@@ -124,6 +125,7 @@ const Footer = ()=>{
 
 
 const Home = ()=>{
+  const [email,setemail] = useState("");
   const navigate = useNavigate();
   const form = useRef();
 
@@ -146,7 +148,7 @@ function handleclick(){
    
    <>
   <div className = "bg-gradient-to-r from-sky-400 to-cyan-300">
-
+  <img className="scale-70 absolute left-1 top-1 h-20 w-100" src={Payz}></img>
   <nav id="header" class="w-full z-30 top-10 py-1 bg-white shadow-lg border-b border-blue-400 mt-24">
       <div class="w-full flex items-center justify-between mt-0 px-6 py-2">
          <label for="menu-toggle" class="cursor-pointer md:hidden block">
@@ -217,7 +219,7 @@ function handleclick(){
                 <p className="text-blue-600">
                   get notified of our launch dates by subscribing
                 </p>
-                <input className = "block text-sm font-medium text-slate-700" type = "email" placeholder = "your email address"></input>
+                <input onChamne={(e)=>{setemail(e.target.value)}} className = "block text-sm font-medium text-slate-700" type = "email" placeholder = "your email address"></input>
                 <button onClick={sendEmail} className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounde"> Subscribe  </button>
             </div>
         </div>
