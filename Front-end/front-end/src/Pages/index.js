@@ -66,7 +66,7 @@ const Pagebody = ()=>{
                     
                     <GoAlert style={style}/>
             
-                <p class="text-xl font-medium text-slate-700 mt-3">The current Banking system has a flaw:</p>
+                <p class="text-xl font-medium text-slate-700 mt-3">The current Banking system lacks functionality :</p>
                 <p class="mt-2 text-sm text-slate-500">
                 "Today, 70% of LatAm's population remains unbanked or underbanked, and 58% of point of sale purchases are still made in cash"
                 <div>
@@ -134,7 +134,7 @@ function handleclick(){
 }
 
   function sendEmail(e){
-    e.preventDefault();
+   e.preventDefault();
   
     emailjs.sendForm('service_2qre2cn', 'template_1vvaj6m', form.current, 'B5hUjblRWJcZycFIc')
       .then((result) => {
@@ -169,7 +169,7 @@ function handleclick(){
                   <li><a class="inline-block" href="#"> </a> </li>
                </ul>
             </nav>
-         </div>
+         </div> 
          
          <div class="order-2 md:order-3 flex flex-wrap items-center justify-end mr-0 md:mr-4" id="nav-content">
             <div class="auth flex items-center w-full md:w-full">
@@ -212,7 +212,8 @@ function handleclick(){
                 <button onClick={handleclick}  className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded  flex-col items-center"> See how it works  </button>
             </div>
         </div>
-<form ref={form} onSubmit={sendEmail}>
+
+
 <div className="w-full p-4 shadow-md lg:max-w-lg flex-1 text-center px-4 py-2 m-2 ">
             <div className="space-y-2">
                 <h3 className="text-2xl font-semibold">
@@ -221,12 +222,16 @@ function handleclick(){
                 <p className="text-blue-600">
                   get notified of our launch dates by subscribing
                 </p>
-                <input onChamne={(e)=>{setemail(e.target.value)}} className = "block text-sm font-medium text-slate-700" type = "email" placeholder = "your email address"></input>
-                <button onClick={sendEmail} className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounde"> Subscribe  </button>
+                <form ref={form} onSubmit={sendEmail}>
+                <label>Email: </label>
+      <input type="email" name="user_email" />
+                <input type="submit" value="Send" onClick={sendEmail} className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"/>
+                </form>
             </div>
+            
         </div>
-</form>
-        
+
+  
 
         
 
