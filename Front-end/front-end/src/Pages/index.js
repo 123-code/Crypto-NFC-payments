@@ -100,17 +100,33 @@ const Pagebody = ()=>{
 
     </>
 
-  )}
+  )}// <FaEthereum /> https://mobile.twitter.com/Payzmobile
 const Footer = ()=>{
+  const navigate = useNavigate();
   return(
     <footer className="bg-gray-200 text-center lg:text-left">
   <div className="text-gray-700 text-center p-4">
     Reach us at:
     <div className="inline-flex">
-    <AiOutlineTwitter/>
+   
+
+   <a href = 'https://etherscan.io/address/0xc3342Fe4218beD0Bccbcd285D2Eb0514bA67C1f3' target='_blank'>
+   <FaEthereum />
+
+   </a>
+
+   <a href = 'https://github.com/123-code' target='_blank'>
    <AiFillGithub/>
-   <AiFillLinkedin/>
-   <FaEthereum/>
+
+   </a>
+
+
+   <a href = 'https://mobile.twitter.com/Payzmobile' target='_blank'>
+   <AiOutlineTwitter/>
+
+   </a>
+
+
     </div>
     <a className="text-gray-800" href="https://tailwind-elements.com/"></a>
   </div>

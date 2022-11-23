@@ -1,43 +1,30 @@
-// SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.9;
+//SPDX-License-Identifier: UNLICENSED
+pragma solidity 0.8.17;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
-import "@openzeppelin/contracts/security/Pausable.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract MyToken is ERC20, ERC20Burnable, Pausable, Ownable {
-    constructor() ERC20("MyToken", "MTK") {}
+contract Coin is ERC20{
+    address public owner;
 
-    mapping(address => uint256) accountbalances;
-    event Incrementsupply(address user,uint256 amount);
-    event Minter(address minter);
-    event pause(bool paused);
-    event unpause(bool unpaused);
+    constructor() ERC20("PayzToken","PYZ"){
 
-
-    function pause() public onlyOwner {
-        _pause();
     }
 
-    function unpause() public onlyOwner {
-        _unpause();
+
+    function minttokens(address _to) external payable{
+        _mint(_to,1);
     }
 
-    function mint(address to, uint256 amount) public onlyOwner {
-        _mint(to, amount);
+
+    function balance(address _address) external view returns(uint){
+        return balanceOf(_address);
     }
 
-    function _beforeTokenTransfer(address from, address to, uint256 amount)
-        internal
-        whenNotPaused
-        override
-    {
-        super._beforeTokenTransfer(from, to, amount);
+
+    function burntokens(address _from ,uint256 _amount) external{
+        _burn(_from,_amount);
     }
 
-     function balanceOf(address _address) public view returns(uint){
-        return balance(_address);
-    }
+
 
 }
