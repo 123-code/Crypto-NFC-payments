@@ -5,7 +5,7 @@ export default function How(){
 <div className ="bg-gradient-to-t from-gray-100 to-gray-300">
     <h1 className="font-sans text-justify text-3xl  font-extrabold "> How will it work? </h1>
 <h3 className="font-mono text-justify ">
-... is a decentralized and permissionless blockchain-based payment system.
+Payz is a decentralized and permissionless wallet & payments app.
 
 <div>
 we ,provide a seamless and frictionless payment experience by letting users safely 
@@ -37,7 +37,7 @@ we ,provide a seamless and frictionless payment experience by letting users safe
    
 <div>
 <h1 className="font-sans text-justify text-2xl font-extrabold "> A L2 based payment app</h1>
-... will work based on an ERC 20 contract deployed on a Layer 2, giving us the fast and cheap
+Payz will work based on an ERC 20 contract deployed on a Layer 2(polygon), giving us the fast and cheap
 transactions we need on a payment system. Money can be added to the system in three main ways for Now
 
 
@@ -48,7 +48,11 @@ transactions we need on a payment system. Money can be added to the system in th
 once money is added, a mint function will be invoked on the smart contract, and you 
 will see your digital dollars on your screen.
 
-another function has to be invoked on the ERC-20 smart contract for the transfer and withdrawal operations.
+another function will be invoked on the ERC-20 smart contract for the transfer and withdrawal operations.
+
+Payz will allow you to access the permissionless financial system & pay usong a 1:1 backed stablecoin.
+Everything powered by the security of Ethereum.
+
 <h1 className="font-sans text-justify text-2xl font-extrabold "> A user Friendly-UI</h1>
 A react/react-native frontend will help connecting the user to the smart contract functions 
 the experience will be very similar to the payment apps they alraedy know, the difference is that they will be using a
@@ -59,6 +63,14 @@ fully decentralized financial service.
     basically we are creating a bank account that is owned by the user, they will be enjoying 
     a fast, reliable and permissionless app, that will allow them to overcome the current
     burdens placed by the financial system in Latin America. 
+</div>
+<h1 className="font-sans text-justify text-2xl font-extrabold "> A Financial App that scales </h1>
+<div>
+Users will interact with the app just as they do with a normal payment app like venmo.
+They will use the stablkecoin as digital dollars, dollars they be able to withdraw if neeeded,  thanks to 
+alliances with local financial institutions. 
+
+Incentives to pay their friends, send  economic gifts will help the app scale faster. 
 </div>
 </h3>
 
