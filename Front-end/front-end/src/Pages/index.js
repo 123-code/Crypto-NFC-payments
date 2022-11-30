@@ -149,6 +149,10 @@ function handleclick(){
   navigate("/how")
 }
 
+function handleregisterclick(){
+  navigate("/register")
+}
+
   function sendEmail(e){
    e.preventDefault();
   
@@ -213,6 +217,7 @@ function handleclick(){
                 <p className="text-blue-600">
                     we are building a permissionless, fast and safe payment system aimed at the unbanked.
                 </p>
+                <button onClick={handleregisterclick}  className = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded  flex-col items-center"> Register </button>
             </div>
         </div>
 

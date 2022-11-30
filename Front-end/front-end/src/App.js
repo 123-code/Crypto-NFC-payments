@@ -1,6 +1,7 @@
 
 import Home from './Pages/index';
 import How from './Pages/how';
+import Register from './Pages/Register';
 //import MyRoutes from "./Pages/routes";
 import { BrowserRouter as Router,Route,Routes} from "react-router-dom";
 import './App.css';
@@ -13,6 +14,7 @@ function App() {
   <Routes>
 <Route path='/' element={<Home/>}/>
 <Route path='/how' element={<How/>}/>
+<Route path='/register' element={<Register/>}/>
 </Routes>
 </Router>
 </div>    

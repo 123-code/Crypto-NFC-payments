@@ -2,6 +2,7 @@ import { Routes ,Route } from 'react-router-dom';
 import Home from './index';
 import About from './about_us';
 import How  from './how';
+import Register from './Register';
 
 
 
@@ -15,11 +16,15 @@ const MyRoutes = () => {
                 <Route path="/how">
                     <How/>
                 </Route>
+
+                <Route path="/register">
+                    <Register/>
+                </Route>
                
         </Routes>
     );
 } 
-export default Routes;
+export default MyRoutes;
 /*
 <Route path="/register" component={Register}>
                     <Register/>
