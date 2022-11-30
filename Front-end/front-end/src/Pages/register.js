@@ -3,12 +3,15 @@ import axios from 'axios';
 
 const Register = ()=>{
   const[googleOauthurl,setgoogleOauthurl] = useState('');
+  const client = axios.create({
+    baseURL:"http://localhost:3000/auth/google/url"
+  });
 
   useEffect(()=>{
 const loadoauthurl = async()=>{
   try{
-const response = await axios.get('/auth/google/callback');
-const {url} = await response.data;
+const response = await axios.get('http://localhost:3000/auth/google/url');
+const {url} =  response.data;
 setgoogleOauthurl(url);
   }catch(err){
 console.error(err);
