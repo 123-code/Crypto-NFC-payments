@@ -2,9 +2,9 @@
 pragma solidity 0.8.17;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract Coin is ERC20{
-    address public owner;
+contract Coin is ERC20,Ownable{
 
     constructor() ERC20("PayzToken","PYZ"){
 
@@ -21,7 +21,7 @@ contract Coin is ERC20{
     }
 
 
-    function burntokens(address _from ,uint256 _amount) external{
+    function burntokens(address _from,uint256 _amount)external{
         _burn(_from,_amount);
     }
 
