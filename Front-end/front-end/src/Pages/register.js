@@ -1,11 +1,32 @@
 import React,{useState,useEffect} from 'react';
 import axios from 'axios';
+import {useKey_generator} from './util/key_generator';
 
+
+
+//
 const Register = ()=>{
   const[googleOauthurl,setgoogleOauthurl] = useState('');
+  const[authenticated,setauthenticated] = useState(false);
+  const generator = useKey_generator();
   const client = axios.create({
     baseURL:"http://localhost:3000/auth/google/url"
   });
+
+  const generateuseraccount = ()=>{
+    if(authenticated){
+try{
+generator()
+}catch(err){
+console.error(err);
+}
+    }
+
+else if(!authenticated){
+
+}
+
+  }
 
   useEffect(()=>{
 const loadoauthurl = async()=>{
