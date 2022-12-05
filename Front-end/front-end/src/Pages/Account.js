@@ -1,25 +1,4 @@
 
-import {ethers,providers} from 'ethers';
-import {COIN_POLYGON_ADDRESS,COIN_POLYGON_ABI} from '../constants';
-
-const Account = ()=>{
-
-    const getcontractOwner = ()=>{
-
-   
-  
-        
-}
-
-return(
-    <>
-
-    </>
-)
-}
-export default Account
-
-
 import {React,useRef,useState,useEffect} from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
@@ -28,9 +7,9 @@ import Web3Modal from 'web3modal';
 import ethers from "ethers";
 import { providers } from "ethers";
 
-import {NFT_CONTRACT_ADDRESS,NFT_CONTRACT_ABI} from "../constants";
+import {COIN_POLYGON_ADDRESS,COIN_POLYGON_ABI} from '../constants';
  
-export default function Home() {
+export default function Account() {
   const Web3ModalRef = useRef();
   const [walletConnected,setwalletConnected] = useState(false);
 
@@ -83,16 +62,8 @@ export default function Home() {
   return(
    <div>
     <Head>
-      <title> CryptoDevs NFT</title>
-    </Head>
-<div className={styles.main}>
-  
-{!walletConnected ? (<button onClick={connectwallet} className={styles.button}> connect wallet </button>)
-: null}
-    
 
+    </Head>
 </div>
-   </div>
-    
   )
 }
