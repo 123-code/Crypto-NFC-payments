@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import axios from 'axios';
-import {useKey_generator} from './util/key_generator';
+import {useKey_generator} from '../util/key_generator';
 
 
 

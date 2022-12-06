@@ -12,7 +12,9 @@ export const googleOauthCallbackRoute = {
         const{_id:id,email,info} = updateduser;
         jwt.sign({id,email,info},process.env.JWT_CECRET,(err,token)=>{
             if(err) return res.sendStatus(500)
-            res.redirect(`http://localhost:3000/login?token=${token}`)
+            // redirect to create pin screen. 
+            
+            res.redirect(`http://localhost:3001/Login?token=${token}`)
         })
     }
 }
