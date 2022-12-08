@@ -14,7 +14,7 @@ export const googleOauthCallbackRoute = {
             if(err) return res.sendStatus(500)
             // redirect to create pin screen. 
             
-            res.redirect(`http://localhost:3001/Login`)
+            res.redirect(`http://localhost:3001/Login?token=${token}`)
             //http://localhost:3001/Login?token=${token}
         })
     }
