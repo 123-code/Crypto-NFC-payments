@@ -1,6 +1,7 @@
 import jwt from 'jsonwebtoken';
 import {getGoogleuser} from '../util/getgoogleuser';
 import {createGoogleUser} from '../util/createuser';
+require("dotenv").config({ path: ".env" });
 
 export const googleOauthCallbackRoute = {
     path:'/auth/google/callback',
