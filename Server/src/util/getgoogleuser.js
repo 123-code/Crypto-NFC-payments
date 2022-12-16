@@ -2,7 +2,7 @@ import axios from 'axios';
 import { OauthClient } from './OauthClient';
 
 const getAccessAndBearerTokenUrl = ({accessToken})=>
-`https://www.googleapis.com/oauth2/v1userinfo?alt=json&access_token=${accessToken}`
+`https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token=${accessToken}`
 
 // code google sends as an argument 
 export const getGoogleuser = async ({code})=>{
@@ -12,4 +12,4 @@ const response = await axios.get(
     {headers:{Authorization: `Bearer ${tokens.id_token}`}},
 );
 return response.data;
-}
+} 
