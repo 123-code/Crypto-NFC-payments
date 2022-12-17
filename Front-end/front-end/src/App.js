@@ -1,7 +1,7 @@
 
 import Home from './Pages/index';
 import How from './Pages/how';
-import Register from './Pages/register';
+import Register from './Pages/Register';
 import Login from './Pages/Login';
 //import MyRoutes from "./Pages/routes";
 import { BrowserRouter as Router,Route,Routes} from "react-router-dom";
