@@ -3,6 +3,8 @@ import Home from './Pages/index';
 import How from './Pages/how';
 import Register from './Pages/Register';
 import Login from './Pages/Login';
+import SetPin from './Pages/Set_pin';
+
 //import MyRoutes from "./Pages/routes";
 import { BrowserRouter as Router,Route,Routes} from "react-router-dom";
 import './App.css';
@@ -16,7 +18,7 @@ function App() {
 <Route path='/' element={<Home/>}/>
 <Route path='/how' element={<How/>}/>
 <Route path='/register' element={<Register/>}/>
-
+<Route path='/setpin' element={<SetPin/>}/>
 </Routes>
 </Router>
 </div>    

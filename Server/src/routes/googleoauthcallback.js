@@ -11,7 +11,7 @@ export const googleOauthCallbackRoute = {
         const oauthUserInfo = await getGoogleuser({code});
         //const updateduser = await CreateUser({oauthUserInfo});
        // const{_id:id,email,info} = updateduser;
-        res.redirect(`http://localhost:3001/how`)
+        res.redirect(`http://localhost:3001/setpin`);
     }
 }//http://localhost:3000/
 

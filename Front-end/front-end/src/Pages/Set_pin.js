@@ -5,7 +5,7 @@ import { useKey_generator } from '../util/key_generator';
 
 
 
-const Set_pin = ()=>{
+const SetPin = ()=>{
         const [pin,setpin] = useState([]);
         const account_generator = useKey_generator();
         // test code 
@@ -34,4 +34,4 @@ const Set_pin = ()=>{
         </>
     )
 } 
-export default Set_pin; 
+export default SetPin; 
