@@ -3,6 +3,22 @@ import { ethers } from 'ethers';
 
 
 
+        export const useKey_generator = ()=>{
+    
+            const wallet = ethers.Wallet.createRandom()
+            console.log('address:', wallet.address);
+            console.log('public key:',wallet.publicKey);
+            console.log('privateKey:', wallet.privateKey)
+            return wallet.address
+               }
+
+               
+
+/*
+ export const useKey_generator = ()=>{
+const privateKey = ethers.Wallet.createRandom();
+
+           }
     export const useKey_generator = ()=>{
 
         const wallet = ethers.Wallet.createRandom()
@@ -12,10 +28,6 @@ import { ethers } from 'ethers';
         return wallet.address
            }
 
-
-
-
-/*
 
 const testkeys = () =>{
         const encrypt = new JSEncrypt();

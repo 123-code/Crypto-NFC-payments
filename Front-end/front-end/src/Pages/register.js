@@ -13,20 +13,6 @@ const Register = ()=>{
     baseURL:"http://localhost:3000/auth/google/url"
   });
 
-  const generateuseraccount = ()=>{
-    if(authenticated){
-try{
-generator()
-}catch(err){
-console.error(err);
-}
-    }
-
-else if(!authenticated){
-
-}
-
-  }
 
   useEffect(()=>{
 const loadoauthurl = async()=>{
