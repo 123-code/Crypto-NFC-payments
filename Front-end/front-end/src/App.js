@@ -1,7 +1,7 @@
 
 import Home from './Pages/index';
 import How from './Pages/how';
-import Register from './Pages/Register';
+import Register from './Pages/register';
 import Login from './Pages/Login';
 import SetPin from './Pages/Set_pin';
 
