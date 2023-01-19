@@ -4,6 +4,7 @@ import How from './Pages/how';
 import Register from './Pages/register';
 import Login from './Pages/Login';
 import SetPin from './Pages/Set_pin';
+import Account from './Pages/Account';
 
 //import MyRoutes from "./Pages/routes";
 import { BrowserRouter as Router,Route,Routes} from "react-router-dom";
@@ -19,6 +20,7 @@ function App() {
 <Route path='/how' element={<How/>}/>
 <Route path='/register' element={<Register/>}/>
 <Route path='/setpin' element={<SetPin/>}/>
+<Route path='/account' element={<Account/>}/>
 </Routes>
 </Router>
 </div>    
